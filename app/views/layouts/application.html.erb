@@ -11,9 +11,12 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
+  <body class="row">
+    <div class="one columns centered">
+      <%= render 'layouts/header' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= javascript_include_tag "application" %>
+    </div>
   </body>
 </html>

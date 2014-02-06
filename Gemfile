@@ -41,6 +41,8 @@ gem 'rails_12factor', group: :production
 gem 'foundation-rails', '~> 5.1.0'
 
 gem 'simple_form', '~> 3.0.0.rc'
+
+gem 'batman-rails'
 end
 
 # Use ActiveModel has_secure_password
