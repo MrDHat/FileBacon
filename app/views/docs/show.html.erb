@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @doc.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @doc.url %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @doc.type %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @doc.size %>
+</p>
+
+<%= link_to 'Edit', edit_doc_path(@doc) %> |
+<%= link_to 'Back', docs_path %>

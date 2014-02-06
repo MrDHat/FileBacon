@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: FileBacon_development
   pool: 5
-  username: FileBacon
+  #username: FileBacon
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
