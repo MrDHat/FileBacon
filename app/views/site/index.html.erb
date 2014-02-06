@@ -1,16 +1,33 @@
-<h2>Latest Documents</h2>
-<table style="width: 100%">
-  <thead>
-    <tr>
-      <th>Url</th>
-    </tr>
-  </thead>
+<% if current_user %>
+  <h2>Latest Documents</h2>
+  <table style="width: 100%">
+    <thead>
+      <tr>
+        <th>Url</th>
+      </tr>
+    </thead>
 
-  <tbody>
-  <% @docs.each do |doc| %>
-    <tr>
-      <td><%= link_to doc.title, doc.url %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+    <tbody>
+    <% @docs.each do |doc| %>
+      <tr>
+        <td><%= link_to doc.title, doc.url %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+ 
+<% else %>
+  <div class="panel">
+    <h1>Share your files!</h1>
+    <p>A simple app to track and share your files with others.</p>
+    <%= link_to "Get started today", new_user_registration_path, :class => "button button-large" %>
+  </div>
+ 
+  <hr>
+ 
+  <div class="large-4 columns">
+      <h3>About this app</h3>
+      <p>This is a rails test app developed by <a href="http://akshaykatyal.info" target="_blank">Akshay Katyal</a>. Check the source code on <a href="http://github.com/MrDHat/FileBacon" target="_blank">GitHub</a>. </p>
+    </div>
+  </div>
+<% end %>
