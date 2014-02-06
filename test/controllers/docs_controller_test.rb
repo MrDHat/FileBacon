@@ -18,7 +18,7 @@ class DocsControllerTest < ActionController::TestCase
 
   test "should create doc" do
     assert_difference('Doc.count') do
-      post :create, doc: { size: @doc.size, title: @doc.title, type: @doc.type, url: @doc.url }
+      post :create, doc: { size: @doc.size, title: @doc.title, file_type: @doc.file_type, url: @doc.url }
     end
 
     assert_redirected_to doc_path(assigns(:doc))
@@ -35,7 +35,7 @@ class DocsControllerTest < ActionController::TestCase
   end
 
   test "should update doc" do
-    patch :update, id: @doc, doc: { size: @doc.size, title: @doc.title, type: @doc.type, url: @doc.url }
+    patch :update, id: @doc, doc: { size: @doc.size, title: @doc.title, file_type: @doc.file_type, url: @doc.url }
     assert_redirected_to doc_path(assigns(:doc))
   end
 

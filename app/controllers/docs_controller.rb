@@ -70,6 +70,6 @@ class DocsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def doc_params
-      params.require(:doc).permit(:title, :url, :type, :size)
+      params.require(:doc).permit(:title, :url, :file_type, :size)
     end
 end

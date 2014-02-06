@@ -3,11 +3,11 @@
 one:
   title: MyString
   url: MyString
-  type: 
+  file_type: 
   size: 1
 
 two:
   title: MyString
   url: MyString
-  type: 
+  file_type: 
   size: 1

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140206153951) do
   create_table "docs", force: true do |t|
     t.string   "title"
     t.string   "url"
-    t.string   "type"
+    t.string   "file_type"
     t.integer  "size"
     t.datetime "created_at"
     t.datetime "updated_at"

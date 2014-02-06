@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  has_many :doc
+  has_many :docs
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

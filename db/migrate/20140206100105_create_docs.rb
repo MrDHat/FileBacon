@@ -3,7 +3,7 @@ class CreateDocs < ActiveRecord::Migration
     create_table :docs do |t|
       t.string :title
       t.string :url
-      t.string :type
+      t.string :file_type
       t.integer :size
 
       t.timestamps
