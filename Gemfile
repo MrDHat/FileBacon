@@ -43,10 +43,11 @@ gem 'foundation-rails', '~> 5.1.0'
 gem 'simple_form', '~> 3.0.0.rc'
 
 gem 'batman-rails'
-end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
+
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'

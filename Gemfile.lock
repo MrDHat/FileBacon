@@ -131,6 +131,7 @@ PLATFORMS
 
 DEPENDENCIES
   batman-rails
+  bcrypt-ruby (~> 3.1.2)
   coffee-rails (~> 4.0.0)
   devise (~> 3.0.0.rc)
   foundation-rails (~> 5.1.0)
