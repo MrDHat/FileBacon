@@ -1,10 +1,11 @@
 class DocsController < ApplicationController
   before_action :set_doc, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  
   # GET /docs
   # GET /docs.json
   def index
-    @docs = Doc.all
+    @docs = current_user.docs.all
   end
 
   # GET /docs/1
@@ -14,7 +15,7 @@ class DocsController < ApplicationController
 
   # GET /docs/new
   def new
-    @doc = Doc.new
+    @doc = current_user.docs.new
   end
 
   # GET /docs/1/edit
@@ -24,7 +25,7 @@ class DocsController < ApplicationController
   # POST /docs
   # POST /docs.json
   def create
-    @doc = Doc.new(doc_params)
+    @doc = current_user.docs.new(doc_params)
 
     respond_to do |format|
       if @doc.save
@@ -64,7 +65,7 @@ class DocsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_doc
-      @doc = Doc.find(params[:id])
+      @doc = current_user.docs.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
