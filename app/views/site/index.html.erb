@@ -1,0 +1,16 @@
+<h2>Latest Documents</h2>
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Url</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @docs.each do |doc| %>
+    <tr>
+      <td><%= link_to doc.title, doc.url %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
