@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: FileBacon_test
   pool: 5
-  username: FileBacon
+  # username: FileBacon
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: FileBacon_production
   pool: 5
-  username: FileBacon
+  # username: FileBacon
   password:
