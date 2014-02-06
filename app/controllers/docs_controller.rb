@@ -1,6 +1,6 @@
 class DocsController < ApplicationController
-  before_action :set_doc, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :set_doc, only: [:show, :edit, :update, :destroy]
   
   # GET /docs
   # GET /docs.json
@@ -65,7 +65,10 @@ class DocsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_doc
-      @doc = current_user.docs.find(params[:id])
+      unless @doc = current_user.docs.where(id: params[:id]).first
+        flash[:alert] = 'Doc not found'
+        redirect_to root_url
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
